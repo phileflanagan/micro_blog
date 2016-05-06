@@ -8,11 +8,11 @@ class ArticlesController < ApplicationController
   end
   
   def edit
-    @article = Article.find(params[:id])
+    find_article
   end
 
   def create
-    @article = Article.new(article_params)
+    find_article
     if @article.save
       flash[:notice] = "Article was successfully created."
       redirect_to article_path(@article)
@@ -22,7 +22,7 @@ class ArticlesController < ApplicationController
   end
   
   def update
-    @article = Article.find(params[:id])
+    find_article
     if @article.update(article_params)
       flash[:notice] = "Article was successfully updated."
       redirect_to article_path(@article)
@@ -32,7 +32,7 @@ class ArticlesController < ApplicationController
   end
   
   def show 
-    @article = Article.find(params[:id])
+    find_article
   end
   
   private
@@ -40,6 +40,8 @@ class ArticlesController < ApplicationController
     params.require(:article).permit(:title, :description)
   end
   
-  
+  def find_article
+    @article = Article.find(params[:id])
+  end
   
 end
