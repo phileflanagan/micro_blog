@@ -6,8 +6,8 @@
       <div class="row articleCard">
         <div class="articleCardInner">
           <h3><%= article.title %></h3>
-          <p class="articleText"><%= truncate(article.description, :lenth => 200) %><p>
-          <%= link_to "Show", article_path(article) %> | 
+          <p class="articleText"><%= truncate(article.description, length: 200) %><p>
+          <%= link_to "Read More", article_path(article) %> | 
           <%= link_to "Edit", edit_article_path(article) %> | 
           <%= link_to "Delete", article_path(article), method: :delete, data: {confirm: "Are you sure?"} %>
         </div>
