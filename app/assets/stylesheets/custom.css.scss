@@ -10,10 +10,12 @@ $yellow: #f0ff4c;
 $red: #d9534f;
 $darkerred: #cc4e49;
 $darkestred: #80312e;
+$green: #5cb85c;
+$darkergreen: #4d994c;
 
 /* Adjust for fixed navbar */
 body { 
-  padding-top: 40px; 
+  padding-top: 50px; 
 }
 
 /* Default Typography */
@@ -159,3 +161,4 @@ ul.nav a:hover {
   color: white;
   font-size: 1.5em;
 }
+
