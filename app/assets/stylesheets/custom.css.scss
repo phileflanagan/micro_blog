@@ -19,9 +19,21 @@ body {
 }
 
 /* Default Typography */
-p, li {
-    font-family: Lato, "Helvetica Neue", sans-serif;
-line-height: 1.4em;
+h1 {
+  padding-top: 20px;
+}
+
+p, li, a {
+  font-family: Lato, "Helvetica Neue", sans-serif;
+  line-height: 1.3em;
+}
+
+.articleText {
+  font-size: 1.4em;
+}
+
+.xpad {
+  padding: 10px 0;
 }
 
 
