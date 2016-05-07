@@ -1,6 +1,7 @@
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "font-awesome";
 
 $blue: #428bca;
 $darkerblue: #3f83bf;
@@ -71,15 +72,38 @@ ul.nav a:hover {
   letter-spacing: -5px;
   font-size: 7em;
   color: white;
-  font-family: Montserrat, sans-serif;
+  font-family: Cabin, sans-serif;
   font-weight: 700;
   text-shadow: 0px 0px 30px #555;
 }
 
 /* Buttons */
-button {
-  font-family: Cabin, sans-serif;
+.btn {
+  font-family: "Helvetica Neue", sans-serif;
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: 700;
   box-shadow: 0px 0px 10px #555;
 }
+
+.btn-xlarge {
+  font-size: 1.7em;
+  padding: 10px 40px;
+}
+
+/* Footer */
+.footer, .footer a {
+  padding-top: 10px;
+  background-color: #555;
+  color: #ccc;
+  font-family: Lato, sans-serif;
+  font-weight: 700;
+}
+
+.footer a:hover {
+  color: white;
+}
+
+.footer i {
+  margin-left: 5px;
+}
+
