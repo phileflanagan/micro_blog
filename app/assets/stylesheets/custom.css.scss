@@ -5,17 +5,25 @@
 
 $blue: #428bca;
 $darkerblue: #3f83bf;
-$darkestblue: #264580;
+$darkestblue: #325aa6;
 $yellow: #f0ff4c;
+$red: #d9534f;
+$darkerred: #cc4e49;
+$darkestred: #80312e;
 
 /* Adjust for fixed navbar */
-body { padding-top: 40px; }
-@media screen and (max-width: 768px) {
-    body { padding-top: 0px; }
+body { 
+  padding-top: 40px; 
 }
 
-/* Header */
+/* Default Typography */
+p, li {
+    font-family: Lato, "Helvetica Neue", sans-serif;
+line-height: 1.4em;
+}
 
+
+/* Header */
 #logo {
   float: left;
   margin-right: 10px;
@@ -31,6 +39,12 @@ body { padding-top: 40px; }
   text-decoration: none;
 }
 
+
+/* Override Bootstrap */
+@media screen and (max-width: 768px) {
+    #logo { padding-left: 20px; }
+}
+
 .navbar {
   background-color: $blue;
   border-bottom: $darkestblue;
@@ -43,10 +57,10 @@ ul.nav a{
 .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus{
   background-color: $darkerblue ;
 }
+
 .dropdown-menu > li > a:hover {
   background-color:$blue;
 }
-
 
 ul.nav a:hover { 
   color: $yellow !important; 
@@ -55,6 +69,28 @@ ul.nav a:hover {
 
 .dropdown-menu {
   background-color: $darkerblue;
+}
+
+.navbar-inverse .navbar-toggle{
+  border-color: white !important;
+}
+
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+  background-color: $darkerblue !important;
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+  border-color: $darkerblue;
+}
+
+.dropdown-menu {
+  background-color: $darkerblue !important;
+}
+
+@media (max-width: 767px){
+  .navbar-inverse .navbar-nav .open .dropdown-menu .divider {
+    background-color: white;
+  }
 }
 
 .hero {
@@ -81,17 +117,18 @@ ul.nav a:hover {
 .btn {
   font-family: "Helvetica Neue", sans-serif;
   text-transform: uppercase;
-  font-weight: 700;
-  box-shadow: 0px 0px 10px #555;
+     font-weight: 700; 
 }
 
 .btn-xlarge {
   font-size: 1.7em;
   padding: 10px 40px;
+  box-shadow: 0px 0px 10px #555;
 }
 
 /* Footer */
 .footer, .footer a {
+  bottom: 0;
   padding-top: 10px;
   background-color: #555;
   color: #ccc;
@@ -107,3 +144,18 @@ ul.nav a:hover {
   margin-left: 5px;
 }
 
+/* Error */
+.error {
+  background-color: $red;
+  border: 1px solid $darkestred;
+  border-radius: 5px;
+  padding: 5px 20px 15px 20px;
+  margin-bottom: 10px;
+}
+.error li {
+  color: white;
+}
+.error h2 {
+  color: white;
+  font-size: 1.5em;
+}
