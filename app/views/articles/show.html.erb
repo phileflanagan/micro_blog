@@ -3,13 +3,13 @@
   
   <h1 class="text-center"> <%= @article.title %> </h1>
   
-  <i class="xpad"></i>
+  <div class="xpad"></div>
   
-  <p class="articleText">
+  <div class="articleText">
     <%= simple_format(@article.description) %>
-  </p>
+  </div>
   
-  <i class="xpad"></i>
+  <div class="xpad"></div>
   
   <%= link_to "Edit", edit_article_path(@article) %> | 
   <%= link_to "Back", articles_path %> | 

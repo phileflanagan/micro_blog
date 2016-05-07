@@ -20,7 +20,7 @@ body {
 
 /* Default Typography */
 h1 {
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 p, li, a {
@@ -33,7 +33,7 @@ p, li, a {
 }
 
 .xpad {
-  padding: 10px 0;
+  padding: 5px 0;
 }
 
 
@@ -144,7 +144,7 @@ ul.nav a:hover {
 .footer, .footer a {
   bottom: 0;
   padding-top: 10px;
-  background-color: #555;
+// background-color: #555;
   color: #ccc;
   font-family: Lato, sans-serif;
   font-weight: 700;
@@ -172,5 +172,21 @@ ul.nav a:hover {
 .error h2 {
   color: white;
   font-size: 1.5em;
+}
+
+/* List of Articles */
+.articleCard {
+  margin: 15px 0;
+  background-color: #f0f0f0;
+  box-shadow: 5px 5px 10px #ddd;
+}
+
+.articleCard h3{
+ margin-top: 0; 
+}
+
+.articleCardInner {
+  padding: 15px 25px 5px;
+  border-left: 5px solid $blue;
 }
 
