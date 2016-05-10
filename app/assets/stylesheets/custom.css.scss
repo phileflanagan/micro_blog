@@ -16,6 +16,7 @@ $darkergreen: #4d994c;
 /* Adjust for fixed navbar */
 body { 
   padding-top: 50px; 
+  height: 100vh;
 }
 
 /* Default Typography */
@@ -141,11 +142,21 @@ ul.nav a:hover {
 }
 
 /* Footer */
-.footer, .footer a {
+#main-container {
+  position: relative;
+  min-height: 100%;
+}
+
+.footer {
+  position: absolute;
   bottom: 0;
+}
+
+.footer, .footer a {
+  width: 100%;
   padding-top: 10px;
-// background-color: #555;
-  color: #ccc;
+  background-color: #eaeaea;
+  color: #aaa;
   font-family: Lato, sans-serif;
   font-weight: 700;
 }
@@ -156,6 +167,10 @@ ul.nav a:hover {
 
 .footer i {
   margin-left: 5px;
+}
+
+.footer a:hover {
+  color: $blue;
 }
 
 /* Error */
@@ -190,3 +205,6 @@ ul.nav a:hover {
   border-left: 5px solid $blue;
 }
 
+.addpad {
+  padding: 25px;
+}
